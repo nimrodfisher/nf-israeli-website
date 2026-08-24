@@ -1,6 +1,6 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
-  "rewrites": [{ "source": "/((?!assets|images|fonts|favicon|robots|sitemap).*)", "destination": "/index.html" }],
+  "rewrites": [{ "source": "/((?!assets|images|testimonials|fonts|favicon|profile\\.jpg|logo-reference\\.jpg|robots|sitemap).*)", "destination": "/index.html" }],
   "headers": [{ "source": "/(.*)", "headers": [{ "key": "X-Content-Type-Options", "value": "nosniff" }, { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }] }]
 }

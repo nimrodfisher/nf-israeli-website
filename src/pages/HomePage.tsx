@@ -4,7 +4,7 @@ import { SiteHeader } from '../components/SiteHeader';
 import { FAQSection, FAQItem } from '../components/FAQSection';
 import { OptimizedImage } from '../components/OptimizedImage';
 import { Button } from '../components/ui/button';
-import { Language, localizedPath } from '../lib/seo';
+import { absoluteUrl, Language, localizedPath, SITE_NAME, SITE_URL } from '../lib/seo';
 
 const CALENDAR_URL = 'https://calendar.app.google/P6mjrP2Akirk3zodA';
 const EMAIL = 'nimrod@ai-analytics-hub.com';
@@ -57,6 +57,12 @@ function schemaFor(language: Language) {
   return {
     '@context': 'https://schema.org',
     '@graph': [
+      {
+        '@type': 'Organization',
+        name: SITE_NAME,
+        url: SITE_URL,
+        logo: absoluteUrl('/logo-reference.jpg'),
+      },
       { '@type': 'WebSite', name: 'Nimrod Fisher | AI & Data Transformation', description: isHebrew ? 'ייעוץ AI, דאטה ואנליטיקה לעסקים קטנים ובינוניים בישראל.' : 'AI, data, and analytics consulting for small and medium-sized businesses in Israel.' },
       { '@type': 'Person', name: 'Nimrod Fisher', jobTitle: isHebrew ? 'יועץ AI ודאטה' : 'AI and data consultant', sameAs: ['https://www.linkedin.com/in/nimrod-fisher/'] },
       { '@type': 'FAQPage', mainEntity: faq[language].map((item) => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answer } })) },
