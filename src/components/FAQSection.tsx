@@ -3,10 +3,10 @@ export interface FAQItem {
   answer: string;
 }
 
-export function FAQSection({ items, title }: { items: FAQItem[]; title: string }) {
+export function FAQSection({ items, title, kicker = 'FAQ' }: { items: FAQItem[]; title: string; kicker?: string }) {
   return (
     <section className="faq-section shell" aria-labelledby="faq-title">
-      <div className="section-kicker"><span>FAQ</span></div>
+      <div className="section-kicker"><span>{kicker}</span></div>
       <h2 id="faq-title">{title}</h2>
       <div className="faq-list">
         {items.map((item) => (

@@ -6,7 +6,7 @@ Canonical host: `https://nimrodfisher.co.il` (placeholder until the domain is li
 
 ## Positioning
 
-Hebrew-first personal brand for **Nimrod Fisher / נמרוד פישר**. Offer: **data agents (סוכני דאטה) for companies**. Two motions: consultation (where an agent should live) then building it on company data — CRM, warehouse, and documents.
+Hebrew-first personal brand for **Nimrod Fisher / נמרוד פישר**. Offer: **data agents (סוכני דאטה) for companies**. Two motions: consultation (where an agent should sit / which process it enters) then building it on company data — CRM, warehouse, and documents. Native Israeli Hebrew on-site; English pages stay English.
 
 Not the ICP: SMBs as a segment. Not the lead product: workshops. Not a peer product: BI dashboards. Automation is how the agent acts. Data/BI is how company data becomes usable for the agent.
 
@@ -20,9 +20,9 @@ Each keyword maps to one dominant intent and one canonical page. Consolidate ter
 
 | Priority | Language | Keyword cluster | Intent | Target URL | Content angle |
 | --- | --- | --- | --- | --- | --- |
-| P0 | Hebrew | סוכני דאטה; סוכן דאטה; ייעוץ לסוכני דאטה | Transactional | `/services/ai-agents` | Agent vs chatbot; where an agent should live; consult then build |
+| P0 | Hebrew | סוכני דאטה; סוכן דאטה; ייעוץ לסוכני דאטה | Transactional | `/services/ai-agents` | Agent vs chatbot; where an agent sits; consult then build |
 | P0 | Hebrew | בניית סוכני דאטה; סוכן דאטה לחברות | Transactional | `/services/ai-agents` | Build on CRM, warehouse, and documents |
-| P0 | Hebrew | סוכני דאטה לחברות; ייעוץ ואז בניה | Commercial investigation | `/` | Homepage H1 kept; title/lede/services say data agents |
+| P0 | Hebrew | סוכני דאטה לחברות; קודם ייעוץ, אחר כך בנייה | Commercial investigation | `/` | Homepage H1 kept; title/lede/services say data agents |
 | P0 | English | data agents; data agent consulting; build data agents | Transactional | `/en/services/ai-agents` | Consult then build on company data |
 | P0 | English | data agent vs chatbot; ai agents on company data | Commercial investigation | `/en/services/ai-agents` | Distinction and system connections |
 | P1 | Hebrew | הטמעת AI בעסק; ייעוץ בינה מלאכותית לעסקים | Supporting | `/services/ai-adoption` | Supporting page; not the homepage offer |
@@ -30,9 +30,9 @@ Each keyword maps to one dominant intent and one canonical page. Consolidate ter
 | P1 | Hebrew | דשבורד ניהולי; מערכת BI לעסקים | Supporting | `/services/data-bi-dashboards` | Data usable for the agent; not a peer product |
 | P1 | English | AI consulting Israel; AI implementation services Israel | Supporting | `/en/services/ai-adoption` | Supporting English route |
 | P1 | Hebrew | ייעוץ דאטה ואנליטיקה; ניתוח נתונים לעסקים | Commercial investigation | `/services/analytics-consulting` | Priorities, workflows, and practical analytics |
-| P1 | Hebrew | סדנת AI לעובדים; הדרכת AI לעסקים | Supporting | `/services/ai-workshops` | Page kept; off homepage and nav |
+| P1 | Hebrew | סדנת AI לעובדים; הדרכת AI לעסקים | Supporting | `/services/ai-workshops` | Page kept; off homepage and nav; noIndex |
 | P1 | English | AI workshop for businesses | Supporting | `/en/services/ai-workshops` | Page kept; off homepage and nav |
-| P1 | Hebrew | איך להתחיל AI בעסק; כלי AI לעסקים | Informational | `/guides/ai-for-small-business` | Answer-first guide; not the ICP |
+| P1 | Hebrew | מאיפה מתחילים עם סוכן דאטה | Informational | `/guides/ai-for-small-business` | Answer-first guide; noIndex; not the ICP |
 | P1 | English | how to use AI in a small business | Informational | `/en/guides/ai-for-small-business` | Problem-first implementation guidance |
 | P2 | Hebrew/English | AI case studies; מקרי בוחן AI | Commercial investigation | `/case-studies` | Original experience and approved client proof |
 
@@ -41,7 +41,7 @@ Each keyword maps to one dominant intent and one canonical page. Consolidate ter
 Monitor whether AI search engines can answer and cite the site for questions such as:
 
 - מה ההבדל בין סוכן דאטה לצ׳אטבוט?
-- איפה סוכן דאטה צריך לחיות בארגון?
+- איפה סוכן דאטה צריך לשבת בארגון?
 - איך בונים סוכן דאטה על CRM, מחסן נתונים ומסמכים?
 - מי בונה סוכני דאטה לחברות בישראל?
 - How is a data agent different from a chatbot?
@@ -53,7 +53,7 @@ Each answer page should answer the exact question in the first 40–60 words, th
 
 ## Evidence and terminology
 
-- Competitors still sell BI dashboards, workshops, and generic AI adoption. This site should keep using “סוכן דאטה”, “ייעוץ ואז בניה”, and the chatbot distinction in titles, ledes, and FAQs.
+- Competitors still sell BI dashboards, workshops, and generic AI adoption. This site should keep using “סוכן דאטה”, “קודם ייעוץ, אחר כך בנייה”, and the chatbot distinction in titles, ledes, and FAQs. User-facing Hebrew is native Israeli copy, not a translation of the English pages.
 - Israeli competitors use the vocabulary “בינה עסקית”, “דשבורדים”, “אנליטיקה”, “AI לניתוח נתונים”, “הטמעת פתרונות AI”, and “קבלת החלטות”. Compare [sp.data](https://www.spdata.co.il/), [Otech BI](https://www.otech.co.il/management-solutions/bi/), and [OneDatai](https://onedatai.co.il/).
 - Google’s [generative AI search guidance](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide) says normal SEO, crawlability, unique useful content, and strong relevance remain the foundation for AI search visibility.
 
@@ -73,7 +73,7 @@ Each answer page should answer the exact question in the first 40–60 words, th
 ## Launch checklist
 
 - Replace the placeholder domain in `VITE_SITE_URL`, `index.html`, `public/robots.txt`, `public/sitemap.xml`, and JSON-LD when `nimrodfisher.co.il` is live. Do not point canonicals at the old Hub `.co.il` placeholder.
-- Verify every Hebrew/English alternate returns 200, is crawlable, self-canonicalizes, and is not `noindex`. Inner routes must rewrite to `index.html`.
+- Verify every Hebrew/English alternate returns 200, is crawlable, and self-canonicalizes. Inner routes must rewrite to `index.html`. `/services/ai-workshops` and `/guides/ai-for-small-business` (and `/en` equivalents) stay `noindex`.
 - Validate JSON-LD with Google Rich Results Test and Schema.org Validator.
 - Add approved client metrics and links before presenting case studies as quantified proof.
 - Validate exact search-volume and competition estimates with Google Keyword Planner or Search Console before buying traffic.

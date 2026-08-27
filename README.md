@@ -1,6 +1,6 @@
 # Nimrod Fisher — Data agents for companies
 
-Standalone Hebrew-first site for **Nimrod Fisher / נמרוד פישר**. Offer: data agents (סוכני דאטה) for companies. Consult first (where an agent should live), then build it on company data.
+Standalone Hebrew-first site for **Nimrod Fisher / נמרוד פישר**. Offer: data agents (סוכני דאטה) for companies. Consult first (where an agent should sit), then build it on company data. On-site Hebrew is native Israeli copy, not a translation of the English pages.
 
 ## Working assumptions
 

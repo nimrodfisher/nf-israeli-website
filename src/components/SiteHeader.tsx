@@ -9,7 +9,7 @@ interface SiteHeaderProps {
 }
 
 const labels = {
-  he: { nav: 'ניווט ראשי', approach: 'איך אני עובד', services: 'מה אפשר לעשות', about: 'קצת עליי', cta: 'קביעת ייעוץ ראשוני', switch: 'English' },
+  he: { nav: 'ניווט ראשי', approach: 'איך אני עובד', services: 'סוכני דאטה', about: 'קצת עליי', cta: 'לקבוע שיחה', switch: 'English' },
   en: { nav: 'Main navigation', approach: 'Approach', services: 'Services', about: 'About', cta: 'Book an assessment', switch: 'עברית' },
 };
 

@@ -28,10 +28,10 @@ const logos = [
 
 const testimonials = {
   he: [
-    { quote: 'העבודה המשותפת עזרה לנו להתמקד במקרי שימוש פרקטיים ובעלי השפעה, ולהימנע מהמלכודות הנפוצות בדרך לאסטרטגיית AI.', name: 'Assaf Levnison', role: 'Director of Marketing Analytics, Gong', avatar: '/testimonials/assaf-levnison.png' },
-    { quote: 'המסגרות שבנינו הפכו לחלק מהשגרה החדשה של הצוות ויצרו השפעה מתמשכת על תהליכי האנליזה שלנו.', name: 'Ran Almog', role: 'Head of Data, Elementor', avatar: '/testimonials/ran-almog.jpeg' },
-    { quote: 'בנינו מערכת שהאיצה משמעותית את תהליכי העבודה של צוות הדאטה ויצרה השפעה מדידה על מהירות הטיפול ועל סיכון ההכנסות.', name: 'Yotam Galon', role: 'VP Operations, Bigabid', avatar: '/testimonials/yotam-galon.jpeg' },
-    { quote: 'נמרוד עובד עם קבוצת הדאטה שלנו כבר כמה חודשים, ונתן לנו כיוון ברור איך לשנות את הדרך שבה אנחנו עובדים עם דאטה באמצעות AI. מעבר לאסטרטגיה, הוא ליווה את האנליסטים שלנו באופן מעשי והשאיר לנו מסגרות עבודה שהצוות עדיין משתמש בהן. הוא באופן עקבי חרג מעבר למה שביקשנו — תמיד זמין, תמיד עם חיוך, וברמת מקצועיות שקשה למצוא.', name: 'Itay Aizik', role: 'Data Platform Team Lead, Artlist', avatar: '/testimonials/itay-aizik.png' },
+    { quote: 'העבודה איתו עזרה לנו להתמקד בשימושים שבאמת זזים, ולא ליפול למלכודות הרגילות של אסטרטגיית AI.', name: 'Assaf Levnison', role: 'Director of Marketing Analytics, Gong', avatar: '/testimonials/assaf-levnison.png' },
+    { quote: 'המסגרות שבנינו הפכו לחלק מהעבודה השגרתית של הצוות, ועדיין משפיעות על איך שאנחנו עושים אנליזה.', name: 'Ran Almog', role: 'Head of Data, Elementor', avatar: '/testimonials/ran-almog.jpeg' },
+    { quote: 'בנינו מערכת שזירזה ממש את העבודה של צוות הדאטה, ונתנה לראות במהירות הטיפול ובסיכון להכנסות.', name: 'Yotam Galon', role: 'VP Operations, Bigabid', avatar: '/testimonials/yotam-galon.jpeg' },
+    { quote: 'נמרוד עובד איתנו בקבוצת הדאטה כבר כמה חודשים. הוא נתן לנו כיוון ברור איך לעבוד עם דאטה דרך AI. מעבר לאסטרטגיה, הוא ישב עם האנליסטים והשאיר מסגרות שהצוות עדיין עובד לפיהן. תמיד זמין, תמיד עם חיוך, ומקצועיות שקשה למצוא.', name: 'Itay Aizik', role: 'Data Platform Team Lead, Artlist', avatar: '/testimonials/itay-aizik.png' },
   ],
   en: [
     { quote: 'The work helped us focus on practical, high-impact use cases and avoid the common pitfalls of building an AI strategy.', name: 'Assaf Levnison', role: 'Director of Marketing Analytics, Gong', avatar: '/testimonials/assaf-levnison.png' },
@@ -43,9 +43,9 @@ const testimonials = {
 
 const faq: Record<Language, FAQItem[]> = {
   he: [
-    { question: 'מה ההבדל בין סוכן דאטה לצ׳אטבוט?', answer: 'צ׳אטבוט עונה לאנשים באתר או בוואטסאפ. סוכן דאטה חי בתוך החברה: מתחבר ל-CRM, למחסן הנתונים ולמסמכים, ועושה עבודה על הדאטה שכבר יש. זה לא אותו מוצר.' },
-    { question: 'איפה סוכן דאטה צריך לחיות בארגון?', answer: 'ליד החלטה או תהליך שחוזר, נשען על מידע, ונתקע היום ב״תבדוק לי רגע״. הייעוץ ממפה את המקום הזה לפני שבונים משהו.' },
-    { question: 'למה מתחילים בייעוץ ורק אחר כך בבניה?', answer: 'כי בלי להבין איפה הסוכן צריך לחיות, בונים כלי יפה שאף אחד לא מפעיל. קודם המקום, אחר כך החיבור לדאטה, אחר כך הבניה.' },
+    { question: 'מה ההבדל בין סוכן דאטה לצ׳אטבוט?', answer: 'צ׳אטבוט עונה לאנשים באתר או בוואטסאפ. סוכן דאטה עובד בתוך החברה: מתחבר ל-CRM, למחסן הנתונים ולמסמכים, ועושה עבודה על הדאטה שכבר יש. זה לא אותו מוצר.' },
+    { question: 'איפה סוכן דאטה נכנס בארגון?', answer: 'ליד החלטה או תהליך שחוזר, נשען על מידע, ונתקע היום ב״תבדוק לי רגע״. הייעוץ ממפה את המקום הזה לפני שבונים משהו.' },
+    { question: 'למה מתחילים בייעוץ ורק אחר כך בבנייה?', answer: 'כי בלי להבין איפה הסוכן צריך לשבת, בונים כלי יפה שאף אחד לא מפעיל. קודם המקום, אחר כך החיבור לדאטה, אחר כך הבנייה.' },
   ],
   en: [
     { question: 'How is a data agent different from a chatbot?', answer: 'A chatbot answers visitors on a site or in chat. A data agent lives inside the company: it connects to the CRM, warehouse, and documents, and does work on data you already have. That is not the same product.' },
@@ -65,7 +65,7 @@ function schemaFor(language: Language) {
         url: SITE_URL,
         logo: absoluteUrl('/logo-reference.jpg'),
       },
-      { '@type': 'WebSite', name: 'Nimrod Fisher | Data Agents', description: isHebrew ? 'סוכני דאטה לחברות: ייעוץ איפה הסוכן צריך לחיות, ואז בניה על הדאטה של הארגון.' : 'Data agents for companies: consult on where an agent should live, then build it on company data.' },
+      { '@type': 'WebSite', name: 'Nimrod Fisher | Data Agents', description: isHebrew ? 'סוכני דאטה לחברות: קודם מבינים באיזה תהליך הסוכן נכנס, אחר כך בונים אותו על הדאטה של הארגון.' : 'Data agents for companies: consult on where an agent should live, then build it on company data.' },
       { '@type': 'Person', name: 'Nimrod Fisher', jobTitle: isHebrew ? 'יועץ ובונה סוכני דאטה' : 'Data agent advisor and builder', sameAs: ['https://www.linkedin.com/in/nimrod-fisher/'] },
       { '@type': 'FAQPage', mainEntity: faq[language].map((item) => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answer } })) },
     ],
@@ -77,35 +77,35 @@ export function HomePage({ language }: { language: Language }) {
   const CtaArrow = isHebrew ? ArrowUpLeft : ArrowUpRight;
   const HowArrow = isHebrew ? ChevronLeft : ChevronRight;
   const copy = isHebrew ? {
-    title: 'סוכני דאטה לחברות | ייעוץ ואז בניה | נמרוד פישר',
-    description: 'סוכני דאטה לחברות: ייעוץ איפה הסוכן צריך לחיות בארגון, ואז בניה על הדאטה, ה-CRM והמסמכים שכבר יש. לא צ׳אטבוט. לא עוד דשבורד.',
+    title: 'סוכני דאטה לחברות | נמרוד פישר',
+    description: 'סוכני דאטה לחברות: קודם מבינים באיזה תהליך הסוכן נכנס, אחר כך בונים אותו על ה-CRM, המחסן והמסמכים שכבר יש. לא צ׳אטבוט. לא עוד דשבורד.',
     eyebrow: 'DATA AGENTS / ISRAEL',
     h1: <>הדאטה כבר שם.<br /><em>השאלה היא מה עושים איתו.</em></>,
-    lede: 'אני עוזר לחברות להבין איפה סוכן דאטה צריך לחיות — ואז לבנות אותו על הדאטה של החברה. ייעוץ, ואז בניה. לא צ׳אטבוט על האתר, לא עוד דשבורד שאף אחד לא פותח.',
-    cta: 'קביעת ייעוץ ראשוני',
+    lede: 'אני עוזר לחברות להבין באיזה תהליך סוכן דאטה צריך לשבת, ואז בונה אותו על ה-CRM, המחסן והמסמכים שכבר יש לכם. קודם מבינים איפה זה נכנס. אחר כך בונים. לא צ׳אטבוט באתר, ולא עוד דשבורד שאף אחד לא פותח.',
+    cta: 'לקבוע שיחה',
     how: 'איך זה עובד',
-    note: <>מה שמעניין אותי הוא לא כמה AI יש לכם.<br />אלא מה הוא מאפשר לכם לעשות.</>,
-    proof: 'בניתי, ייעצתי ולימדתי בצוותים של',
-    statement: <>רוב החברות לא סובלות מבעיית דאטה.<br /><span>הן סובלות מבעיית החלטות.</span></>,
+    note: <>מה שמעניין אותי זה לא כמה AI יש לכם.<br />זה מה הוא נותן לכם לעשות.</>,
+    proof: 'ליוויתי צוותים ב־',
+    statement: <>לרוב החברות אין בעיית דאטה.<br /><span>יש בעיית החלטות.</span></>,
     statementCopy: 'יש לכם מחסן נתונים. יש לכם כלים. יש לכם אנשים חכמים. ועדיין, הרבה החלטות חשובות מתחילות ב״תבדוק לי רגע…״ ונגמרות אחרי שלושה ימים.',
-    statementMuted: 'העבודה שלי מתחילה מההחלטה שצריך לשפר — ורק אז חוזרת לדאטה, לתהליך ולסוכן שיכול לעשות את זה פשוט יותר.',
+    statementMuted: 'העבודה שלי מתחילה מההחלטה שצריך לשפר. רק אחר כך חוזרים לדאטה, לתהליך ולסוכן שיכול לפשט את זה.',
     approachLead: <>לא מתחילים בטכנולוגיה.<br />מתחילים במה שצריך לקרות.</>,
     cards: [
-      ['מוצאים את המנוף', 'ממפים איפה החלטות נתקעות, איפה מידע מתבזבז, ומה ייתן לארגון את הקפיצה הגדולה ביותר.'],
-      ['בונים את מה שחסר', 'הקונטקסט, המבנה, החיבורים והגבולות שהופכים סוכן דאטה מתשובה נחמדה למערכת שאפשר לסמוך עליה.'],
-      ['משאירים יכולת', 'לא בונים תלות בי. בונים אצלכם את היכולת להפעיל, למדוד ולשפר את הדבר גם אחרי שאני יוצא.'],
+      ['מוצאים איפה זה נתקע', 'ממפים איפה החלטות נתקעות, איפה מידע מתבזבז, ומה באמת יזיז את הארגון.'],
+      ['בונים את מה שחסר', 'ההקשר, המבנה, החיבורים והגבולות שהופכים סוכן דאטה מתשובה נחמדה למשהו שאפשר לסמוך עליו.'],
+      ['הצוות יודע להמשיך בליי', 'לא בונים תלות בי. בונים אצלכם את היכולת להפעיל, למדוד ולשפר גם אחרי שאני יוצא.'],
     ],
-    workTitle: <>מאתגרים עסקיים<br /><em>לסוכנים שעובדים.</em></>,
+    workTitle: <>משאלה תקועה,<br /><em>לסוכן שעובד על הדאטה שלכם.</em></>,
     services: [
-      ['ייעוץ לסוכני דאטה', 'מאתרים איפה סוכן צריך לחיות: איזו החלטה, איזה תהליך, ואיזה מידע כבר קיים בארגון.', localizedPath('/services/ai-agents', 'he')],
-      ['בניית סוכני דאטה', 'בונים סוכן על הדאטה, ה-CRM, המחסן והמסמכים של החברה. האוטומציה היא איך הוא פועל — לא שירות בצד.', localizedPath('/services/ai-agents', 'he') + '#build'],
+      ['ייעוץ לסוכני דאטה', 'מאתרים באיזה תהליך הסוכן צריך לשבת: איזו החלטה, איזה תהליך, ואיזה מידע כבר קיים בארגון.', localizedPath('/services/ai-agents', 'he')],
+      ['בניית סוכני דאטה', 'בונים סוכן על הדאטה, ה-CRM, המחסן והמסמכים של החברה. האוטומציה היא איך שהוא פועל, לא שירות בצד.', localizedPath('/services/ai-agents', 'he') + '#build'],
     ],
     assessmentTitle: <>לא בטוחים איפה להתחיל?<br /><em>בואו נתחיל משאלה אחת.</em></>,
-    assessmentCopy: 'בייעוץ לסוכני דאטה נבין איפה סוכן צריך לחיות בארגון, אילו מערכות ודאטה כבר קיימים, ומה הצעד הראשון ששווה לבנות.',
-    checks: ['מיפוי איפה סוכן דאטה צריך לחיות', 'חיבור ל-CRM, למחסן נתונים ולמסמכים שכבר יש', 'תכנית בניה שאפשר להסביר להנהלה'],
-    closing: <>AI בלי הקשר הוא בעיקר<br /><em>דרך מהירה לטעות.</em></>,
-    closingCopy: 'הדאטה שלכם לא צריך עוד שכבת באזז. הוא צריך מישהו שיבין מה לעשות איתו.',
-    faqTitle: 'שאלות שהנהלות שואלות על סוכני דאטה',
+    assessmentCopy: 'בייעוץ לסוכני דאטה נבין באיזה תהליך הסוכן צריך לשבת, אילו מערכות ודאטה כבר יש, ומה הצעד הראשון ששווה לבנות.',
+    checks: ['מיפוי איפה סוכן דאטה צריך לשבת', 'חיבור ל-CRM, למחסן נתונים ולמסמכים שכבר יש', 'תכנית בנייה שההנהלה יכולה לעמוד מאחוריה'],
+    closing: <>AI בלי להבין את העסק הוא בעיקר<br /><em>דרך מהירה לטעות.</em></>,
+    closingCopy: 'הדאטה שלכם לא צריך עוד סיסמאות. הוא צריך מישהו שמבין מה לעשות איתו.',
+    faqTitle: 'שאלות שחוזרות על סוכני דאטה',
   } : {
     title: 'Data Agents for Companies | Consult, Then Build | Nimrod Fisher',
     description: 'Data agents for companies: consult on where an agent should live, then build it on your CRM, warehouse, and documents. Not a chatbot. Not another dashboard.',
@@ -169,20 +169,20 @@ export function HomePage({ language }: { language: Language }) {
           <div className="logo-marquee" aria-label="Selected clients">
             <div className="logo-marquee-track">{[0, 1].map((set) => <div className="logo-marquee-group" key={set} aria-hidden={set === 1}>{logos.map((logo) => <OptimizedImage key={`${set}-${logo.alt}`} src={logo.src} alt={set === 0 ? logo.alt : ''} />)}</div>)}</div>
           </div>
-          <div className="testimonials-heading"><div className="section-kicker"><span>WHAT STAYS</span></div><h2>{isHebrew ? <>לא רק פרויקט.<br /><em>יכולת שנשארת.</em></> : <>Not just a project.<br /><em>Capability that stays.</em></>}</h2></div>
+          <div className="testimonials-heading"><div className="section-kicker"><span>{isHebrew ? 'מה שנשאר' : 'WHAT STAYS'}</span></div><h2>{isHebrew ? <>לא עוד פרויקט שנגמר.<br /><em>משהו שהצוות ממשיך איתו.</em></> : <>Not just a project.<br /><em>Capability that stays.</em></>}</h2></div>
           <div className="testimonials-grid">{testimonials[language].map((testimonial) => <article className="testimonial-card" key={testimonial.name}><p>“{testimonial.quote}”</p><div className="testimonial-author"><OptimizedImage src={testimonial.avatar} alt={testimonial.name} /><div><strong>{testimonial.name}</strong><span>{testimonial.role}</span></div></div></article>)}</div>
         </section>
 
-        <section className="statement-section"><div className="shell statement-grid"><div className="section-kicker"><span>THE POINT</span></div><div><h2>{copy.statement}</h2><p className="statement-copy">{copy.statementCopy}</p><p className="statement-copy muted">{copy.statementMuted}</p></div><div className="decision-card"><div className="decision-card-top"><span>BACKWARDS FROM VALUE</span><ArrowDownLeft size={18} /></div><div className="decision-step"><strong>{isHebrew ? 'איזו החלטה?' : 'Which decision?'}</strong></div><ArrowDownLeft className="decision-arrow" size={22} /><div className="decision-step"><strong>{isHebrew ? 'איזה מידע?' : 'Which information?'}</strong></div><ArrowDownLeft className="decision-arrow" size={22} /><div className="decision-step active"><strong>{isHebrew ? 'מה הדרך הפשוטה ביותר?' : 'What is the simplest path?'}</strong></div></div></div></section>
+        <section className="statement-section"><div className="shell statement-grid"><div className="section-kicker"><span>{isHebrew ? 'הנקודה' : 'THE POINT'}</span></div><div><h2>{copy.statement}</h2><p className="statement-copy">{copy.statementCopy}</p><p className="statement-copy muted">{copy.statementMuted}</p></div><div className="decision-card"><div className="decision-card-top"><span>{isHebrew ? 'מהערך אחורה' : 'BACKWARDS FROM VALUE'}</span><ArrowDownLeft size={18} /></div><div className="decision-step"><strong>{isHebrew ? 'איזו החלטה?' : 'Which decision?'}</strong></div><ArrowDownLeft className="decision-arrow" size={22} /><div className="decision-step"><strong>{isHebrew ? 'איזה מידע?' : 'Which information?'}</strong></div><ArrowDownLeft className="decision-arrow" size={22} /><div className="decision-step active"><strong>{isHebrew ? 'מה הדרך הפשוטה ביותר?' : 'What is the simplest path?'}</strong></div></div></div></section>
 
-        <section className="approach-section shell" id="approach"><div className="section-heading-row"><div className="section-kicker"><span>THE APPROACH</span></div><p>{copy.approachLead}</p></div><div className="approach-grid">{copy.cards.map(([title, body], index) => <article className={`approach-card ${index === 0 ? 'approach-dark' : index === 1 ? 'approach-light' : 'approach-orange'}`} key={title}><h3>{title}</h3><p>{body}</p><div className="card-mark">{index === 0 ? '↗' : index === 1 ? '◌' : '✓'}</div></article>)}</div></section>
+        <section className="approach-section shell" id="approach"><div className="section-heading-row"><div className="section-kicker"><span>{isHebrew ? 'הגישה' : 'THE APPROACH'}</span></div><p>{copy.approachLead}</p></div><div className="approach-grid">{copy.cards.map(([title, body], index) => <article className={`approach-card ${index === 0 ? 'approach-dark' : index === 1 ? 'approach-light' : 'approach-orange'}`} key={title}><h3>{title}</h3><p>{body}</p><div className="card-mark">{index === 0 ? '↗' : index === 1 ? '◌' : '✓'}</div></article>)}</div></section>
 
-        <section className="work-section shell" id="work"><div className="section-heading-row work-heading"><div className="section-kicker"><span>WHAT I DO</span></div><h2>{copy.workTitle}</h2></div><div className="service-list">{copy.services.map(([title, body, href]) => <a className="service-row" href={href} key={title}><div><h3>{title}</h3><p>{body}</p></div><ArrowUpLeft className="service-arrow" size={24} /></a>)}</div></section>
+        <section className="work-section shell" id="work"><div className="section-heading-row work-heading"><div className="section-kicker"><span>{isHebrew ? 'מה אני עושה' : 'WHAT I DO'}</span></div><h2>{copy.workTitle}</h2></div><div className="service-list">{copy.services.map(([title, body, href]) => <a className="service-row" href={href} key={title}><div><h3>{title}</h3><p>{body}</p></div><ArrowUpLeft className="service-arrow" size={24} /></a>)}</div></section>
 
-        <section className="assessment-section shell" id="assessment"><div className="assessment-graphic"><span>ASSESS</span><span>DECIDE</span><span>BUILD</span><span>LEARN</span></div><div className="assessment-copy"><div className="section-kicker"><span>THE FIRST MOVE</span></div><h2>{copy.assessmentTitle}</h2><p>{copy.assessmentCopy}</p><ul className="check-list">{copy.checks.map((item) => <li key={item}><Check size={16} /> {item}</li>)}</ul><a className="ui-button ui-button-dark ui-button-large" href={CALENDAR_URL} target="_blank" rel="noreferrer">{copy.cta} <CtaArrow size={18} /></a></div></section>
+        <section className="assessment-section shell" id="assessment"><div className="assessment-graphic"><span>{isHebrew ? 'לאבחן' : 'ASSESS'}</span><span>{isHebrew ? 'להחליט' : 'DECIDE'}</span><span>{isHebrew ? 'לבנות' : 'BUILD'}</span><span>{isHebrew ? 'ללמוד' : 'LEARN'}</span></div><div className="assessment-copy"><div className="section-kicker"><span>{isHebrew ? 'הצעד הראשון' : 'THE FIRST MOVE'}</span></div><h2>{copy.assessmentTitle}</h2><p>{copy.assessmentCopy}</p><ul className="check-list">{copy.checks.map((item) => <li key={item}><Check size={16} /> {item}</li>)}</ul><a className="ui-button ui-button-dark ui-button-large" href={CALENDAR_URL} target="_blank" rel="noreferrer">{copy.cta} <CtaArrow size={18} /></a></div></section>
 
-        <FAQSection items={faq[language]} title={copy.faqTitle} />
-        <section className="closing-section shell"><div className="closing-meta"><span>ONE LAST THING</span></div><h2>{copy.closing}</h2><div className="closing-bottom"><p>{copy.closingCopy}</p><a href={`mailto:${EMAIL}`}>{EMAIL} <ArrowUpRight size={17} /></a></div></section>
+        <FAQSection items={faq[language]} title={copy.faqTitle} kicker={isHebrew ? 'שאלות' : 'FAQ'} />
+        <section className="closing-section shell"><div className="closing-meta"><span>{isHebrew ? 'עוד משהו אחד' : 'ONE LAST THING'}</span></div><h2>{copy.closing}</h2><div className="closing-bottom"><p>{copy.closingCopy}</p><a href={`mailto:${EMAIL}`}>{EMAIL} <ArrowUpRight size={17} /></a></div></section>
       </main>
       <footer className="site-footer shell"><span>© 2026 NIMROD FISHER</span><span>DATA AGENTS</span><a href="https://www.linkedin.com/in/nimrod-fisher/" target="_blank" rel="noreferrer"><Linkedin size={17} /> LinkedIn</a></footer>
     </div>
