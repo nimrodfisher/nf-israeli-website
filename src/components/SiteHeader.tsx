@@ -26,7 +26,7 @@ export function SiteHeader({ language, currentPath }: SiteHeaderProps) {
       </a>
       <nav className={menuOpen ? 'nav-links is-open' : 'nav-links'} aria-label={copy.nav}>
         <a href={`${home}#approach`} onClick={() => setMenuOpen(false)}>{copy.approach}</a>
-        <a href={localizedPath('/services/ai-adoption', language)} onClick={() => setMenuOpen(false)}>{copy.services}</a>
+        <a href={localizedPath('/services/ai-agents', language)} onClick={() => setMenuOpen(false)}>{copy.services}</a>
         <a href={localizedPath('/about', language)} onClick={() => setMenuOpen(false)}>{copy.about}</a>
         <a className="language-switch" href={localizedPath(currentPath, language === 'he' ? 'en' : 'he')} onClick={() => setMenuOpen(false)}>{copy.switch}</a>
         <a className="header-cta" href={`${home}#assessment`} onClick={() => setMenuOpen(false)}>{copy.cta}</a>

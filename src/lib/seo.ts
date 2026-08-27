@@ -1,5 +1,5 @@
-export const SITE_URL = import.meta.env.VITE_SITE_URL || 'https://ai-analytics-hub.co.il';
-export const SITE_NAME = 'Nimrod Fisher | AI & Data Transformation';
+export const SITE_URL = import.meta.env.VITE_SITE_URL || 'https://nimrodfisher.co.il';
+export const SITE_NAME = 'Nimrod Fisher | Data Agents';
 export const DEFAULT_OG_IMAGE = '/profile.jpg';
 
 export type Language = 'he' | 'en';

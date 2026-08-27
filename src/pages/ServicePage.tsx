@@ -1,8 +1,9 @@
 import { ArrowUpLeft, Check } from 'lucide-react';
+import { useEffect } from 'react';
 import { FAQSection, FAQItem } from '../components/FAQSection';
 import { SEOHead } from '../components/SEOHead';
 import { SiteHeader } from '../components/SiteHeader';
-import { Language, localizedPath } from '../lib/seo';
+import { Language, localizedPath, SITE_URL, absoluteUrl } from '../lib/seo';
 
 const CALENDAR_URL = 'https://calendar.app.google/P6mjrP2Akirk3zodA';
 
@@ -12,6 +13,62 @@ type ServiceCopy = {
 };
 
 const services: Record<string, ServiceCopy> = {
+  'ai-agents': {
+    he: {
+      title: 'סוכני דאטה לחברות | ייעוץ ואז בניה',
+      description: 'סוכן דאטה זה לא צ׳אטבוט. ייעוץ איפה הסוכן צריך לחיות בארגון, ואז בניה על ה-CRM, מחסן הנתונים והמסמכים של החברה.',
+      h1: 'סוכן דאטה — לא צ׳אטבוט על האתר',
+      intro: 'צ׳אטבוט עונה למבקרים. סוכן דאטה חי בתוך החברה: מתחבר ל-CRM, למחסן הנתונים ולמסמכים, ועושה עבודה על הדאטה שכבר יש. מתחילים בייעוץ — איפה הסוכן צריך לחיות — ורק אז עוברים לבניה.',
+      keywords: ['סוכני דאטה', 'סוכן דאטה', 'ייעוץ לסוכני דאטה', 'בניית סוכני דאטה', 'data agents'],
+      bullets: [
+        'הפרדה ברורה בין סוכן דאטה לבין צ׳אטבוט שיווקי',
+        'ייעוץ שממפה איפה הסוכן צריך לחיות: החלטה, תהליך, ומקורות מידע',
+        'חיבור ל-CRM, למחסן נתונים, למסמכים ולכלים שכבר רצים בארגון',
+        'בניה על הדאטה של החברה, עם אוטומציה כחלק מהפעולה של הסוכן',
+        'הדאטה וה-BI הופכים לחומר גלם שהסוכן יכול להשתמש בו — לא למוצר נפרד',
+      ],
+      steps: [
+        ['01 / ייעוץ', 'מבינים איפה סוכן צריך לחיות: איזו החלטה תקועה, איזה מידע כבר קיים, ואיפה חיבור ל-CRM, למחסן או למסמכים ייצר ערך.'],
+        ['02 / בניה', 'בונים את הסוכן על הדאטה של החברה — חיבורים, הקשר, גבולות, והפעולות שהוא באמת מבצע.'],
+        ['03 / הפעלה', 'משאירים לצוות יכולת להפעיל, למדוד ולשפר — בלי תלות בי לכל שאלה.'],
+      ],
+      outcomes: ['החלטה ברורה איפה הסוכן חי — ואיפה הוא לא', 'סוכן מחובר למערכות ולדאטה האמיתיים של החברה', 'דרך עבודה שהצוות יכול להמשיך ממנה'],
+      faqs: [
+        { question: 'מה ההבדל בין סוכן דאטה לצ׳אטבוט?', answer: 'צ׳אטבוט מדבר עם אנשים בערוץ קדמי. סוכן דאטה עובד על הדאטה של החברה: CRM, מחסן נתונים, מסמכים ותהליכים פנימיים. אם מישהו מוכר לכם ״סוכן״ שהוא בעיקר חלון צ׳אט באתר — זה צ׳אטבוט.' },
+        { question: 'לאילו מערכות אפשר לחבר סוכן דאטה?', answer: 'ל-CRM, למחסן נתונים, למסמכים פנימיים, לכלים תפעוליים ולמקורות שהצוות כבר עובד איתם. החיבור הוא חלק מהבניה, לא תוסף אחרי ההשקה.' },
+        { question: 'למה מתחילים בייעוץ ולא ישר בבניה?', answer: 'כי קודם צריך להבין איפה הסוכן צריך לחיות — איזו החלטה, איזה תהליך, איזה מידע. בלי זה בונים כלי יפה שאף אחד לא מפעיל.' },
+        { question: 'האם צריך להחליף את מחסן הנתונים או את ה-BI?', answer: 'לא. הדאטה וה-BI הקיימים הופכים לחומר שהסוכן יכול להשתמש בו. לא מחליפים אותם במוצר מקביל, ולא בונים דשבורד נוסף בתור העסקה.' },
+        { question: 'כמה זמן לוקח מהייעוץ לבניה ראשונה?', answer: 'ייעוץ ממוקד ואז בניה ראשונה נמשכים בדרך כלל כמה שבועות, לפי מורכבות החיבורים ולזמינות הצוות. לא מתחילים בפרויקט תשתית של שנה.' },
+      ],
+    },
+    en: {
+      title: 'Data Agents for Companies | Consult, Then Build',
+      description: 'A data agent is not a chatbot. Consult on where the agent should live, then build it on the company CRM, warehouse, and documents.',
+      h1: 'A data agent — not a chatbot on the website',
+      intro: 'A chatbot answers visitors. A data agent lives inside the company: it connects to the CRM, warehouse, and documents, and does work on data you already have. Start with consulting — where the agent should live — then build.',
+      keywords: ['data agents', 'data agent consulting', 'build data agents', 'data agent vs chatbot', 'ai agents on company data'],
+      bullets: [
+        'A clear line between a data agent and a marketing chatbot',
+        'Consulting that maps where the agent should live: decision, workflow, and sources',
+        'Connections to the CRM, warehouse, documents, and tools already in use',
+        'A build on company data, with automation as how the agent acts',
+        'Data and BI become material the agent can use — not a peer product',
+      ],
+      steps: [
+        ['01 / Consult', 'Find where an agent should live: which stuck decision, which existing information, and where a CRM, warehouse, or document connection creates value.'],
+        ['02 / Build', 'Build the agent on company data — connections, context, guardrails, and the actions it actually takes.'],
+        ['03 / Operate', 'Leave the team able to run, measure, and improve it — without depending on me for every question.'],
+      ],
+      outcomes: ['A clear call on where the agent lives — and where it does not', 'An agent connected to the company’s real systems and data', 'A way of working the team can continue'],
+      faqs: [
+        { question: 'How is a data agent different from a chatbot?', answer: 'A chatbot talks to people on a front-door channel. A data agent works on company data: CRM, warehouse, documents, and internal workflows. If someone sells you an “agent” that is mostly a chat window on the website — that is a chatbot.' },
+        { question: 'Which systems can a data agent connect to?', answer: 'CRM, warehouse, internal documents, operational tools, and sources the team already uses. The connection is part of the build, not a later add-on.' },
+        { question: 'Why consult before building?', answer: 'Because you first need to know where the agent should live — which decision, which workflow, which information. Without that, you build a polished tool nobody operates.' },
+        { question: 'Do we need to replace the warehouse or BI?', answer: 'No. Existing data and BI become material the agent can use. They are not replaced by a parallel product, and the engagement is not “another dashboard.”' },
+        { question: 'How long from consultation to a first build?', answer: 'Focused consulting and a first build usually take several weeks, depending on connection complexity and team availability. It does not start with a year-long infrastructure program.' },
+      ],
+    },
+  },
   'ai-adoption': {
     he: { title: 'הטמעת AI בעסק | מתכנית עבודה למערכת פעילה', description: 'תכנית פרקטית להטמעת AI בעסק קטן או בינוני בישראל: בחירת מקרי שימוש, פיילוט מדיד, הרשאות ויכולת פנימית.', h1: 'הטמעת AI שמתחילה מהעסק — לא מהבאזז', intro: 'עוזרים להנהלה להפוך עניין ב-AI לתכנית פעולה שאפשר למדוד, להסביר ולהפעיל בתוך הארגון.', keywords: ['הטמעת AI בעסק', 'ייעוץ AI לעסקים', 'בינה מלאכותית לעסקים קטנים ובינוניים', 'תכנית AI לארגון', 'AI adoption consulting'], bullets: ['מיפוי תהליכים והחלטות עם פוטנציאל אמיתי', 'בחירת פיילוט ראשון עם מדד הצלחה ברור', 'הגדרת בעלות, הרשאות וכללי שימוש בטוח', 'בניית יכולת פנימית ולא תלות בספק'], steps: [['01 / להבין', 'ממפים מה מעכב את העסק ומה כבר קיים בתוך הארגון.'], ['02 / לתעדף', 'בוחרים מהלך קטן מספיק כדי להתחיל ומהותי מספיק כדי להוכיח ערך.'], ['03 / להפעיל', 'בונים, מודדים ומשפרים עם הצוות שממשיך להפעיל את היכולת.']], outcomes: ['תכנית AI שאפשר להציג להנהלה', 'פיילוט ראשון עם מדדי הצלחה', 'שפה משותפת בין הנהלה, דאטה ותפעול'], faqs: [{ question: 'כמה זמן לוקחת הטמעת AI בעסק?', answer: 'אבחון ופיילוט ראשוני נמשכים בדרך כלל 4–8 שבועות, בהתאם למורכבות הנתונים ולזמינות הצוות.' }, { question: 'האם צריך צוות דאטה גדול?', answer: 'לא בהכרח. מתחילים ממקרה שימוש ממוקד ומתכננים סביב האנשים והכלים שכבר קיימים בעסק.' }] },
     en: { title: 'AI Adoption Consulting Israel | From Plan to Practice', description: 'A practical AI adoption plan for Israeli small and medium businesses: use cases, measurable pilots, governance, and internal capability.', h1: 'AI adoption that starts with the business — not the buzzword', intro: 'Turn interest in AI into an action plan your leadership team can measure, explain, and operate.', keywords: ['ai adoption consulting', 'ai consulting israel', 'ai implementation services israel', 'ai strategy for smbs', 'business ai implementation'], bullets: ['Map workflows and decisions with real leverage', 'Choose a first pilot with a clear success metric', 'Define ownership, permissions, and safe usage', 'Build internal capability instead of vendor dependency'], steps: [['01 / Understand', 'Map what slows the business down and what already exists inside it.'], ['02 / Prioritize', 'Choose a move small enough to start and meaningful enough to prove value.'], ['03 / Operate', 'Build, measure, and improve with the team that will own the capability.']], outcomes: ['An AI plan leadership can explain', 'A first pilot with measurable outcomes', 'Shared language across leadership, data, and operations'], faqs: [{ question: 'How long does AI implementation take?', answer: 'An assessment and first pilot usually take 4–8 weeks, depending on data complexity and team availability.' }, { question: 'Do we need a large data team?', answer: 'Not necessarily. Start with one focused use case and design around the people and tools already in the business.' }] },
@@ -38,9 +95,9 @@ function serviceSchema(copy: ServiceCopy['he'], language: Language, path: string
   return {
     '@context': 'https://schema.org',
     '@graph': [
-      { '@type': 'Service', name: copy.h1, description: copy.description, provider: { '@type': 'Person', name: 'Nimrod Fisher', url: 'https://www.linkedin.com/in/nimrod-fisher/' }, areaServed: { '@type': 'Country', name: 'Israel' }, url: path },
+      { '@type': 'Service', name: copy.h1, description: copy.description, provider: { '@type': 'Person', name: 'Nimrod Fisher', url: 'https://www.linkedin.com/in/nimrod-fisher/' }, areaServed: { '@type': 'Country', name: 'Israel' }, url: absoluteUrl(path) },
       { '@type': 'FAQPage', mainEntity: copy.faqs.map((item) => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answer } })) },
-      { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: language === 'he' ? 'בית' : 'Home', item: 'https://ai-analytics-hub.co.il' }, { '@type': 'ListItem', position: 2, name: copy.h1, item: path }] },
+      { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: language === 'he' ? 'בית' : 'Home', item: SITE_URL }, { '@type': 'ListItem', position: 2, name: copy.h1, item: absoluteUrl(path) }] },
     ],
   };
 }
@@ -49,19 +106,26 @@ export function ServicePage({ slug, language }: { slug: string; language: Langua
   const service = services[slug];
   const copy = service[language];
   const path = `/services/${slug}`;
+
+  useEffect(() => {
+    const id = window.location.hash.replace('#', '');
+    if (!id) return;
+    document.getElementById(id)?.scrollIntoView({ block: 'start' });
+  }, [slug, language]);
+
   return (
     <div className="site-page inner-page" dir={language === 'he' ? 'rtl' : 'ltr'}>
       <SEOHead title={copy.title} description={copy.description} path={localizedPath(path, language)} language={language} keywords={copy.keywords} schema={serviceSchema(copy, language, localizedPath(path, language))} />
       <SiteHeader language={language} currentPath={path} />
       <main>
-        <section className="inner-hero shell"><div className="section-kicker"><span>ISRAEL / AI & DATA</span></div><h1>{copy.h1}</h1><p>{copy.intro}</p><a className="ui-button ui-button-primary ui-button-large" href={CALENDAR_URL} target="_blank" rel="noreferrer">{language === 'he' ? 'קביעת ייעוץ ראשוני' : 'Book an assessment'} <ArrowUpLeft size={18} /></a></section>
+        <section className="inner-hero shell"><div className="section-kicker"><span>{slug === 'ai-agents' ? 'ISRAEL / DATA AGENTS' : 'ISRAEL / AI & DATA'}</span></div><h1>{copy.h1}</h1><p>{copy.intro}</p><a className="ui-button ui-button-primary ui-button-large" href={CALENDAR_URL} target="_blank" rel="noreferrer">{language === 'he' ? 'קביעת ייעוץ ראשוני' : 'Book an assessment'} <ArrowUpLeft size={18} /></a></section>
         <section className="inner-grid shell"><div className="inner-grid-heading"><div className="section-kicker"><span>{language === 'he' ? 'WHAT CHANGES' : 'WHAT CHANGES'}</span></div><h2>{language === 'he' ? 'מה משתנה בפועל' : 'What changes in practice'}</h2></div><div className="benefit-list">{copy.bullets.map((bullet) => <div className="benefit-item" key={bullet}><Check size={20} /><p>{bullet}</p></div>)}</div></section>
-        <section className="process-section"><div className="shell"><div className="section-heading-row"><div className="section-kicker"><span>{language === 'he' ? 'THE PROCESS' : 'THE PROCESS'}</span></div><p>{language === 'he' ? 'דרך עבודה קצרה, ברורה ומחוברת לתוצאה.' : 'A short, clear process connected to an outcome.'}</p></div><div className="process-grid">{copy.steps.map(([title, body]) => <article key={title}><strong>{title}</strong><h3>{title.replace(/^\d+\s\/\s/, '')}</h3><p>{body}</p></article>)}</div></div></section>
+        <section className="process-section"><div className="shell"><div className="section-heading-row"><div className="section-kicker"><span>THE PROCESS</span></div><p>{language === 'he' ? 'דרך עבודה קצרה, ברורה ומחוברת לתוצאה.' : 'A short, clear process connected to an outcome.'}</p></div><div className="process-grid">{copy.steps.map(([title, body], index) => <article key={title} id={slug === 'ai-agents' ? ['consult', 'build', 'operate'][index] : undefined}><strong>{title}</strong><h3>{title.replace(/^\d+\s\/\s/, '')}</h3><p>{body}</p></article>)}</div></div></section>
         <section className="outcomes-section shell"><div className="section-kicker"><span>{language === 'he' ? 'THE OUTCOME' : 'THE OUTCOME'}</span></div><h2>{language === 'he' ? 'יוצאים עם משהו שאפשר להפעיל.' : 'Leave with something you can operate.'}</h2><div className="outcomes-grid">{copy.outcomes.map((outcome, index) => <div key={outcome}><span>0{index + 1}</span><p>{outcome}</p></div>)}</div></section>
         <FAQSection items={copy.faqs} title={language === 'he' ? 'שאלות נפוצות על השירות' : 'Frequently asked questions'} />
-        <section className="inner-cta shell"><h2>{language === 'he' ? 'רוצים להבין אם זה מתאים לעסק שלכם?' : 'Want to see if this fits your business?'}</h2><a className="ui-button ui-button-dark ui-button-large" href={CALENDAR_URL} target="_blank" rel="noreferrer">{language === 'he' ? 'קביעת ייעוץ ראשוני' : 'Book an assessment'} <ArrowUpLeft size={18} /></a></section>
+        <section className="inner-cta shell"><h2>{language === 'he' ? 'רוצים להבין אם זה מתאים לחברה שלכם?' : 'Want to see if this fits your company?'}</h2><a className="ui-button ui-button-dark ui-button-large" href={CALENDAR_URL} target="_blank" rel="noreferrer">{language === 'he' ? 'קביעת ייעוץ ראשוני' : 'Book an assessment'} <ArrowUpLeft size={18} /></a></section>
       </main>
-      <footer className="site-footer shell"><span>© 2026 NIMROD FISHER</span><span>AI & DATA TRANSFORMATION</span></footer>
+      <footer className="site-footer shell"><span>© 2026 NIMROD FISHER</span><span>DATA AGENTS</span></footer>
     </div>
   );
 }
