@@ -1,26 +1,27 @@
-# Nimrod Fisher — Israel AI & Data Transformation site
+# Nimrod Fisher — Data agents for companies
 
-Standalone Hebrew-first SEO/GEO site for Israeli small and medium-sized businesses.
+Standalone Hebrew-first site for **Nimrod Fisher / נמרוד פישר**. Offer: data agents (סוכני דאטה) for companies. Consult first (where an agent should live), then build it on company data.
 
 ## Working assumptions
 
-- Working title: Nimrod Fisher — AI & Data Transformation
-- Primary CTA: Executive AI/Data Assessment
-- Provisional canonical: `https://ai-analytics-hub.co.il/`
-- Hebrew is the primary language at `/`; English equivalents live under `/en/`.
-- Contact and calendar links are reused from AI Analytics Hub until replaced.
-- Replace `VITE_SITE_URL` and the provisional domain before production launch.
+- Working title: Nimrod Fisher — Data Agents
+- Primary CTA: Data-agent consultation
+- Canonical placeholder: `https://nimrodfisher.co.il/`
+- Worldwide Hub stays `https://ai-analytics-hub.com` (contact email unchanged)
+- Hebrew is the primary language at `/`; English equivalents live under `/en/`
+- Replace `VITE_SITE_URL` when the `.co.il` domain is live
 
 ## Routes
 
 Hebrew routes are available at the root and English equivalents under `/en/`:
 
-- `/` — AI consulting for Israeli small and medium-sized businesses
+- `/` — Data agents: consult, then build
+- `/services/ai-agents` — Money page (agent vs chatbot; CRM / warehouse / documents)
 - `/services/ai-adoption`
 - `/services/business-automation`
 - `/services/data-bi-dashboards`
 - `/services/analytics-consulting`
-- `/services/ai-workshops`
+- `/services/ai-workshops` — kept, not linked from homepage or nav
 - `/about`
 - `/case-studies`
 - `/guides/ai-for-small-business`

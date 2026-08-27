@@ -1,4 +1,4 @@
-# Replace the provisional domain before launch.
+# Replace the placeholder domain when the .co.il domain is live.
 User-agent: *
 Allow: /
 
@@ -11,4 +11,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://ai-analytics-hub.co.il/sitemap.xml
+Sitemap: https://nimrodfisher.co.il/sitemap.xml
