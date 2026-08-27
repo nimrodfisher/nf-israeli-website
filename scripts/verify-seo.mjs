@@ -77,12 +77,28 @@ if (!homepage.includes('Itay Aizik') || !homepage.includes('artlist-logo')) {
   throw new Error('Artlist testimonial and logo must be present on the homepage.');
 }
 
+if (!homepage.includes('בעיות אמיתיות') || !homepage.includes('סוכני AI לדאטה')) {
+  throw new Error('Homepage Hebrew lede must include בעיות אמיתיות and סוכני AI לדאטה.');
+}
+if (homepage.includes('DATA AGENTS / ISRAEL') || homepage.includes('CLIENT SIGNAL')) {
+  throw new Error('Homepage must not render DATA AGENTS / ISRAEL or CLIENT SIGNAL kicker chips.');
+}
+if (homepage.includes('section-kicker') || homepage.includes('eyebrow')) {
+  throw new Error('Homepage must not render orange kicker chips.');
+}
+
 const servicePage = await readFile(new URL('src/pages/ServicePage.tsx', root), 'utf8');
 const contentPages = await readFile(new URL('src/pages/ContentPages.tsx', root), 'utf8');
 const header = await readFile(new URL('src/components/SiteHeader.tsx', root), 'utf8');
 const indexHtml = await readFile(new URL('index.html', root), 'utf8');
 if (!servicePage.includes("noIndex={slug === 'ai-workshops'}")) {
   throw new Error('Workshops page must be noIndex.');
+}
+if (!servicePage.includes('סוכני AI לדאטה')) {
+  throw new Error('Agents money page must include סוכני AI לדאטה in visible Hebrew copy.');
+}
+if (servicePage.includes('section-kicker') || contentPages.includes('section-kicker')) {
+  throw new Error('Inner pages must not render orange kicker chips.');
 }
 if (!contentPages.includes('ogType="article" noIndex')) {
   throw new Error('SMB guide page must be noIndex.');
