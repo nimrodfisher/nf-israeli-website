@@ -15,11 +15,11 @@ type ServiceCopy = {
 const services: Record<string, ServiceCopy> = {
   'ai-agents': {
     he: {
-      title: 'סוכני דאטה לחברות | נמרוד פישר',
-      description: 'סוכן דאטה זה לא צ׳אטבוט. קודם מבינים באיזה תהליך הוא נכנס בארגון, אחר כך בונים אותו על ה-CRM, המחסן והמסמכים של החברה.',
+      title: 'סוכני AI לדאטה | נמרוד פישר',
+      description: 'סוכני AI לדאטה לחברות: פותרים בעיות אמיתיות עם דאטה ו-AI. לא צ׳אטבוט. לא עוד דשבורד. פתרונות מקצה לקצה עם ROI אמיתי.',
       h1: 'סוכן דאטה — לא צ׳אטבוט על האתר',
-      intro: 'צ׳אטבוט עונה למבקרים. סוכן דאטה עובד בתוך החברה: מתחבר ל-CRM, למחסן הנתונים ולמסמכים, ועושה עבודה על הדאטה שכבר יש. מתחילים בייעוץ — באיזה תהליך הסוכן נכנס — ורק אחר כך עוברים לבנייה.',
-      keywords: ['סוכני דאטה', 'סוכן דאטה', 'ייעוץ לסוכני דאטה', 'בניית סוכני דאטה', 'data agents'],
+      intro: 'צ׳אטבוט עונה למבקרים. סוכני AI לדאטה עובדים בתוך החברה: מתחברים ל-CRM, למחסן הנתונים ולמסמכים, ועושים עבודה על הדאטה שכבר יש. מתחילים בייעוץ — באיזה תהליך הסוכן נכנס — ורק אחר כך עוברים לבנייה.',
+      keywords: ['סוכני AI לדאטה', 'סוכן AI לדאטה', 'סוכני דאטה', 'סוכן דאטה', 'ייעוץ לסוכני דאטה', 'בניית סוכני דאטה'],
       bullets: [
         'הפרדה ברורה בין סוכן דאטה לבין צ׳אטבוט באתר',
         'ייעוץ שממפה באיזה תהליך הסוכן נכנס: החלטה, תהליך, ומקורות מידע',
@@ -118,11 +118,11 @@ export function ServicePage({ slug, language }: { slug: string; language: Langua
       <SEOHead title={copy.title} description={copy.description} path={localizedPath(path, language)} language={language} keywords={copy.keywords} schema={serviceSchema(copy, language, localizedPath(path, language))} noIndex={slug === 'ai-workshops'} />
       <SiteHeader language={language} currentPath={path} />
       <main>
-        <section className="inner-hero shell"><div className="section-kicker"><span>{slug === 'ai-agents' ? 'ISRAEL / DATA AGENTS' : 'ISRAEL / AI & DATA'}</span></div><h1>{copy.h1}</h1><p>{copy.intro}</p><a className="ui-button ui-button-primary ui-button-large" href={CALENDAR_URL} target="_blank" rel="noreferrer">{language === 'he' ? 'לקבוע שיחה' : 'Book an assessment'} <ArrowUpLeft size={18} /></a></section>
-        <section className="inner-grid shell"><div className="inner-grid-heading"><div className="section-kicker"><span>{language === 'he' ? 'מה משתנה' : 'WHAT CHANGES'}</span></div><h2>{language === 'he' ? 'מה משתנה בפועל' : 'What changes in practice'}</h2></div><div className="benefit-list">{copy.bullets.map((bullet) => <div className="benefit-item" key={bullet}><Check size={20} /><p>{bullet}</p></div>)}</div></section>
-        <section className="process-section"><div className="shell"><div className="section-heading-row"><div className="section-kicker"><span>{language === 'he' ? 'איך זה עובד' : 'THE PROCESS'}</span></div><p>{language === 'he' ? 'דרך עבודה קצרה, ברורה ומחוברת לתוצאה.' : 'A short, clear process connected to an outcome.'}</p></div><div className="process-grid">{copy.steps.map(([title, body], index) => <article key={title} id={slug === 'ai-agents' ? ['consult', 'build', 'operate'][index] : undefined}><strong>{title}</strong><h3>{title.replace(/^\d+\s\/\s/, '')}</h3><p>{body}</p></article>)}</div></div></section>
-        <section className="outcomes-section shell"><div className="section-kicker"><span>{language === 'he' ? 'בסוף' : 'THE OUTCOME'}</span></div><h2>{language === 'he' ? 'יוצאים עם משהו שאפשר להפעיל.' : 'Leave with something you can operate.'}</h2><div className="outcomes-grid">{copy.outcomes.map((outcome, index) => <div key={outcome}><span>0{index + 1}</span><p>{outcome}</p></div>)}</div></section>
-        <FAQSection items={copy.faqs} title={language === 'he' ? 'שאלות נפוצות על השירות' : 'Frequently asked questions'} kicker={language === 'he' ? 'שאלות' : 'FAQ'} />
+        <section className="inner-hero shell"><h1>{copy.h1}</h1><p>{copy.intro}</p><a className="ui-button ui-button-primary ui-button-large" href={CALENDAR_URL} target="_blank" rel="noreferrer">{language === 'he' ? 'לקבוע שיחה' : 'Book an assessment'} <ArrowUpLeft size={18} /></a></section>
+        <section className="inner-grid shell"><div className="inner-grid-heading"><h2>{language === 'he' ? 'מה משתנה בפועל' : 'What changes in practice'}</h2></div><div className="benefit-list">{copy.bullets.map((bullet) => <div className="benefit-item" key={bullet}><Check size={20} /><p>{bullet}</p></div>)}</div></section>
+        <section className="process-section"><div className="shell"><div className="section-heading-row"><p>{language === 'he' ? 'דרך עבודה קצרה, ברורה ומחוברת לתוצאה.' : 'A short, clear process connected to an outcome.'}</p></div><div className="process-grid">{copy.steps.map(([title, body], index) => <article key={title} id={slug === 'ai-agents' ? ['consult', 'build', 'operate'][index] : undefined}><strong>{title}</strong><h3>{title.replace(/^\d+\s\/\s/, '')}</h3><p>{body}</p></article>)}</div></div></section>
+        <section className="outcomes-section shell"><h2>{language === 'he' ? 'יוצאים עם משהו שאפשר להפעיל.' : 'Leave with something you can operate.'}</h2><div className="outcomes-grid">{copy.outcomes.map((outcome, index) => <div key={outcome}><span>0{index + 1}</span><p>{outcome}</p></div>)}</div></section>
+        <FAQSection items={copy.faqs} title={language === 'he' ? 'שאלות נפוצות על השירות' : 'Frequently asked questions'} />
         <section className="inner-cta shell"><h2>{language === 'he' ? 'רוצים להבין אם זה מתאים לחברה שלכם?' : 'Want to see if this fits your company?'}</h2><a className="ui-button ui-button-dark ui-button-large" href={CALENDAR_URL} target="_blank" rel="noreferrer">{language === 'he' ? 'לקבוע שיחה' : 'Book an assessment'} <ArrowUpLeft size={18} /></a></section>
       </main>
       <footer className="site-footer shell"><span>© 2026 NIMROD FISHER</span><span>DATA AGENTS</span></footer>

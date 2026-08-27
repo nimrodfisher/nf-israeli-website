@@ -65,7 +65,7 @@ function schemaFor(language: Language) {
         url: SITE_URL,
         logo: absoluteUrl('/logo-reference.jpg'),
       },
-      { '@type': 'WebSite', name: 'Nimrod Fisher | Data Agents', description: isHebrew ? 'סוכני דאטה לחברות: קודם מבינים באיזה תהליך הסוכן נכנס, אחר כך בונים אותו על הדאטה של הארגון.' : 'Data agents for companies: consult on where an agent should live, then build it on company data.' },
+      { '@type': 'WebSite', name: 'Nimrod Fisher | Data Agents', description: isHebrew ? 'סוכני AI לדאטה: פותרים בעיות אמיתיות עם דאטה ו-AI. לא עוד דשבורד, לא צ׳אטבוט. פתרונות מקצה לקצה עם ROI אמיתי.' : 'AI data agents: solve real problems with data and AI. Not another dashboard, not a chatbot. End-to-end solutions with real ROI.' },
       { '@type': 'Person', name: 'Nimrod Fisher', jobTitle: isHebrew ? 'יועץ ובונה סוכני דאטה' : 'Data agent advisor and builder', sameAs: ['https://www.linkedin.com/in/nimrod-fisher/'] },
       { '@type': 'FAQPage', mainEntity: faq[language].map((item) => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answer } })) },
     ],
@@ -77,11 +77,10 @@ export function HomePage({ language }: { language: Language }) {
   const CtaArrow = isHebrew ? ArrowUpLeft : ArrowUpRight;
   const HowArrow = isHebrew ? ChevronLeft : ChevronRight;
   const copy = isHebrew ? {
-    title: 'סוכני דאטה לחברות | נמרוד פישר',
-    description: 'סוכני דאטה לחברות: קודם מבינים באיזה תהליך הסוכן נכנס, אחר כך בונים אותו על ה-CRM, המחסן והמסמכים שכבר יש. לא צ׳אטבוט. לא עוד דשבורד.',
-    eyebrow: 'DATA AGENTS / ISRAEL',
+    title: 'סוכני AI לדאטה | נמרוד פישר',
+    description: 'סוכני AI לדאטה: פותרים בעיות אמיתיות עם דאטה ו-AI. לא עוד דשבורד, לא צ׳אטבוט. פתרונות מקצה לקצה עם ROI אמיתי.',
     h1: <>הדאטה כבר שם.<br /><em>השאלה היא מה עושים איתו.</em></>,
-    lede: 'אני עוזר לחברות להבין באיזה תהליך סוכן דאטה צריך לשבת, ואז בונה אותו על ה-CRM, המחסן והמסמכים שכבר יש לכם. קודם מבינים איפה זה נכנס. אחר כך בונים. לא צ׳אטבוט באתר, ולא עוד דשבורד שאף אחד לא פותח.',
+    lede: <>אני עוזר לחברות לפתור בעיות אמיתיות בעזרת דאטה ו-AI.<br />לא עוד דשבורד שאף אחד לא פותח, או צ׳אטבוט שעונה כמה מכרנו בחודש האחרון.<br />פתרונות מקצה לקצה עם סוכני AI לדאטה: נכנסים לעומק הבעיה, ממפים, ובונים פתרון עם ROI אמיתי.</>,
     cta: 'לקבוע שיחה',
     how: 'איך זה עובד',
     note: <>מה שמעניין אותי זה לא כמה AI יש לכם.<br />זה מה הוא נותן לכם לעשות.</>,
@@ -107,11 +106,10 @@ export function HomePage({ language }: { language: Language }) {
     closingCopy: 'הדאטה שלכם לא צריך עוד סיסמאות. הוא צריך מישהו שמבין מה לעשות איתו.',
     faqTitle: 'שאלות שחוזרות על סוכני דאטה',
   } : {
-    title: 'Data Agents for Companies | Consult, Then Build | Nimrod Fisher',
-    description: 'Data agents for companies: consult on where an agent should live, then build it on your CRM, warehouse, and documents. Not a chatbot. Not another dashboard.',
-    eyebrow: 'DATA AGENTS / ISRAEL',
+    title: 'AI Data Agents | Nimrod Fisher',
+    description: 'AI data agents: solve real problems with data and AI. Not another dashboard nobody opens, and not a chatbot that recites last month’s sales. End-to-end, with real ROI.',
     h1: <>Your data is already there.<br /><em>The question is what to do with it.</em></>,
-    lede: 'I help companies decide where a data agent should live — then build it on the data you already have. Consultation, then construction. Not a website chatbot, and not another dashboard nobody opens.',
+    lede: <>I help companies solve real problems with data and AI.<br />Not another dashboard nobody opens, and not a chatbot that tells you last month’s sales.<br />End-to-end with AI data agents: go into the problem, map it, and build a solution with real ROI.</>,
     cta: 'Book an assessment',
     how: 'How it works',
     note: <>The question is not how much AI you have.<br />It is what it enables you to do.</>,
@@ -141,12 +139,11 @@ export function HomePage({ language }: { language: Language }) {
   const path = '/';
   return (
     <div className="site-page" dir={isHebrew ? 'rtl' : 'ltr'}>
-      <SEOHead title={copy.title} description={copy.description} path={localizedPath(path, language)} language={language} keywords={isHebrew ? ['סוכני דאטה', 'סוכן דאטה', 'ייעוץ לסוכני דאטה', 'בניית סוכני דאטה', 'סוכן דאטה לחברות', 'data agents'] : ['data agents', 'data agent consulting', 'build data agents', 'ai agents for company data', 'data agent vs chatbot']} schema={schemaFor(language)} />
+      <SEOHead title={copy.title} description={copy.description} path={localizedPath(path, language)} language={language} keywords={isHebrew ? ['סוכני AI לדאטה', 'סוכן AI לדאטה', 'סוכני דאטה', 'סוכן דאטה', 'ייעוץ לסוכני דאטה', 'בניית סוכני דאטה'] : ['ai data agents', 'data agents', 'data agent consulting', 'build data agents', 'ai agents for company data']} schema={schemaFor(language)} />
       <SiteHeader language={language} currentPath={path} />
       <main>
         <section className="hero shell" id="top">
           <div className="hero-copy">
-            <p className="eyebrow"><span className="eyebrow-dot" /> {copy.eyebrow}</p>
             <h1>{copy.h1}</h1>
             <p className="hero-lede">{copy.lede}</p>
             <div className="hero-actions">
@@ -158,31 +155,30 @@ export function HomePage({ language }: { language: Language }) {
           <div className="hero-visual">
             <div className="portrait-frame">
               <OptimizedImage src="/profile.jpg" alt={isHebrew ? 'נמרוד פישר, יועץ ובונה סוכני דאטה' : 'Nimrod Fisher, data agent advisor and builder'} priority className="portrait" />
-              <div className="portrait-caption"><span>NIMROD FISHER</span><span>BUILDER / ADVISOR</span></div>
             </div>
-            <div className="signal-card"><span className="signal-label">THE REAL QUESTION</span><strong>{isHebrew ? <>מה הייתם עושים<br />אם התשובה הייתה<br /><span>מגיעה עכשיו?</span></> : <>What would you do<br />if the answer<br /><span>arrived now?</span></>}</strong><div className="signal-line"><span /><span /><span /><span /><span /></div></div>
+            <div className="signal-card"><strong>{isHebrew ? <>מה הייתם עושים<br />אם התשובה הייתה<br /><span>מגיעה עכשיו?</span></> : <>What would you do<br />if the answer<br /><span>arrived now?</span></>}</strong><div className="signal-line"><span /><span /><span /><span /><span /></div></div>
           </div>
         </section>
 
         <section className="proof-section shell" aria-label={isHebrew ? 'חברות שעבדתי איתן והמלצות' : 'Selected clients and testimonials'}>
-          <div className="proof-heading"><p>{copy.proof}</p><span>CLIENT SIGNAL</span></div>
+          <div className="proof-heading"><p>{copy.proof}</p></div>
           <div className="logo-marquee" aria-label="Selected clients">
             <div className="logo-marquee-track">{[0, 1].map((set) => <div className="logo-marquee-group" key={set} aria-hidden={set === 1}>{logos.map((logo) => <OptimizedImage key={`${set}-${logo.alt}`} src={logo.src} alt={set === 0 ? logo.alt : ''} />)}</div>)}</div>
           </div>
-          <div className="testimonials-heading"><div className="section-kicker"><span>{isHebrew ? 'מה שנשאר' : 'WHAT STAYS'}</span></div><h2>{isHebrew ? <>לא עוד פרויקט שנגמר.<br /><em>משהו שהצוות ממשיך איתו.</em></> : <>Not just a project.<br /><em>Capability that stays.</em></>}</h2></div>
+          <div className="testimonials-heading"><h2>{isHebrew ? <>לא עוד פרויקט שנגמר.<br /><em>משהו שהצוות ממשיך איתו.</em></> : <>Not just a project.<br /><em>Capability that stays.</em></>}</h2></div>
           <div className="testimonials-grid">{testimonials[language].map((testimonial) => <article className="testimonial-card" key={testimonial.name}><p>“{testimonial.quote}”</p><div className="testimonial-author"><OptimizedImage src={testimonial.avatar} alt={testimonial.name} /><div><strong>{testimonial.name}</strong><span>{testimonial.role}</span></div></div></article>)}</div>
         </section>
 
-        <section className="statement-section"><div className="shell statement-grid"><div className="section-kicker"><span>{isHebrew ? 'הנקודה' : 'THE POINT'}</span></div><div><h2>{copy.statement}</h2><p className="statement-copy">{copy.statementCopy}</p><p className="statement-copy muted">{copy.statementMuted}</p></div><div className="decision-card"><div className="decision-card-top"><span>{isHebrew ? 'מהערך אחורה' : 'BACKWARDS FROM VALUE'}</span><ArrowDownLeft size={18} /></div><div className="decision-step"><strong>{isHebrew ? 'איזו החלטה?' : 'Which decision?'}</strong></div><ArrowDownLeft className="decision-arrow" size={22} /><div className="decision-step"><strong>{isHebrew ? 'איזה מידע?' : 'Which information?'}</strong></div><ArrowDownLeft className="decision-arrow" size={22} /><div className="decision-step active"><strong>{isHebrew ? 'מה הדרך הפשוטה ביותר?' : 'What is the simplest path?'}</strong></div></div></div></section>
+        <section className="statement-section"><div className="shell statement-grid"><div><h2>{copy.statement}</h2><p className="statement-copy">{copy.statementCopy}</p><p className="statement-copy muted">{copy.statementMuted}</p></div><div className="decision-card"><div className="decision-step"><strong>{isHebrew ? 'איזו החלטה?' : 'Which decision?'}</strong></div><ArrowDownLeft className="decision-arrow" size={22} /><div className="decision-step"><strong>{isHebrew ? 'איזה מידע?' : 'Which information?'}</strong></div><ArrowDownLeft className="decision-arrow" size={22} /><div className="decision-step active"><strong>{isHebrew ? 'מה הדרך הפשוטה ביותר?' : 'What is the simplest path?'}</strong></div></div></div></section>
 
-        <section className="approach-section shell" id="approach"><div className="section-heading-row"><div className="section-kicker"><span>{isHebrew ? 'הגישה' : 'THE APPROACH'}</span></div><p>{copy.approachLead}</p></div><div className="approach-grid">{copy.cards.map(([title, body], index) => <article className={`approach-card ${index === 0 ? 'approach-dark' : index === 1 ? 'approach-light' : 'approach-orange'}`} key={title}><h3>{title}</h3><p>{body}</p><div className="card-mark">{index === 0 ? '↗' : index === 1 ? '◌' : '✓'}</div></article>)}</div></section>
+        <section className="approach-section shell" id="approach"><div className="section-heading-row"><p>{copy.approachLead}</p></div><div className="approach-grid">{copy.cards.map(([title, body], index) => <article className={`approach-card ${index === 0 ? 'approach-dark' : index === 1 ? 'approach-light' : 'approach-orange'}`} key={title}><h3>{title}</h3><p>{body}</p><div className="card-mark">{index === 0 ? '↗' : index === 1 ? '◌' : '✓'}</div></article>)}</div></section>
 
-        <section className="work-section shell" id="work"><div className="section-heading-row work-heading"><div className="section-kicker"><span>{isHebrew ? 'מה אני עושה' : 'WHAT I DO'}</span></div><h2>{copy.workTitle}</h2></div><div className="service-list">{copy.services.map(([title, body, href]) => <a className="service-row" href={href} key={title}><div><h3>{title}</h3><p>{body}</p></div><ArrowUpLeft className="service-arrow" size={24} /></a>)}</div></section>
+        <section className="work-section shell" id="work"><div className="section-heading-row work-heading"><h2>{copy.workTitle}</h2></div><div className="service-list">{copy.services.map(([title, body, href]) => <a className="service-row" href={href} key={title}><div><h3>{title}</h3><p>{body}</p></div><ArrowUpLeft className="service-arrow" size={24} /></a>)}</div></section>
 
-        <section className="assessment-section shell" id="assessment"><div className="assessment-graphic"><span>{isHebrew ? 'לאבחן' : 'ASSESS'}</span><span>{isHebrew ? 'להחליט' : 'DECIDE'}</span><span>{isHebrew ? 'לבנות' : 'BUILD'}</span><span>{isHebrew ? 'ללמוד' : 'LEARN'}</span></div><div className="assessment-copy"><div className="section-kicker"><span>{isHebrew ? 'הצעד הראשון' : 'THE FIRST MOVE'}</span></div><h2>{copy.assessmentTitle}</h2><p>{copy.assessmentCopy}</p><ul className="check-list">{copy.checks.map((item) => <li key={item}><Check size={16} /> {item}</li>)}</ul><a className="ui-button ui-button-dark ui-button-large" href={CALENDAR_URL} target="_blank" rel="noreferrer">{copy.cta} <CtaArrow size={18} /></a></div></section>
+        <section className="assessment-section shell" id="assessment"><div className="assessment-copy"><h2>{copy.assessmentTitle}</h2><p>{copy.assessmentCopy}</p><ul className="check-list">{copy.checks.map((item) => <li key={item}><Check size={16} /> {item}</li>)}</ul><a className="ui-button ui-button-dark ui-button-large" href={CALENDAR_URL} target="_blank" rel="noreferrer">{copy.cta} <CtaArrow size={18} /></a></div></section>
 
-        <FAQSection items={faq[language]} title={copy.faqTitle} kicker={isHebrew ? 'שאלות' : 'FAQ'} />
-        <section className="closing-section shell"><div className="closing-meta"><span>{isHebrew ? 'עוד משהו אחד' : 'ONE LAST THING'}</span></div><h2>{copy.closing}</h2><div className="closing-bottom"><p>{copy.closingCopy}</p><a href={`mailto:${EMAIL}`}>{EMAIL} <ArrowUpRight size={17} /></a></div></section>
+        <FAQSection items={faq[language]} title={copy.faqTitle} />
+        <section className="closing-section shell"><h2>{copy.closing}</h2><div className="closing-bottom"><p>{copy.closingCopy}</p><a href={`mailto:${EMAIL}`}>{EMAIL} <ArrowUpRight size={17} /></a></div></section>
       </main>
       <footer className="site-footer shell"><span>© 2026 NIMROD FISHER</span><span>DATA AGENTS</span><a href="https://www.linkedin.com/in/nimrod-fisher/" target="_blank" rel="noreferrer"><Linkedin size={17} /> LinkedIn</a></footer>
     </div>
