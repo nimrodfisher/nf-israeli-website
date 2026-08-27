@@ -67,11 +67,33 @@ const homepage = await readFile(new URL('src/pages/HomePage.tsx', root), 'utf8')
 if (!homepage.includes('ייעוץ לסוכני דאטה') || !homepage.includes('בניית סוכני דאטה')) {
   throw new Error('Homepage must lead with data-agent consult and build.');
 }
+if (!homepage.includes('הדאטה כבר שם') || !homepage.includes('השאלה היא מה עושים איתו')) {
+  throw new Error('Homepage H1 must stay הדאטה כבר שם / השאלה היא מה עושים איתו.');
+}
 if (homepage.includes('/services/ai-workshops')) {
   throw new Error('Workshops must stay off the homepage.');
 }
 if (!homepage.includes('Itay Aizik') || !homepage.includes('artlist-logo')) {
   throw new Error('Artlist testimonial and logo must be present on the homepage.');
+}
+
+const servicePage = await readFile(new URL('src/pages/ServicePage.tsx', root), 'utf8');
+const contentPages = await readFile(new URL('src/pages/ContentPages.tsx', root), 'utf8');
+const header = await readFile(new URL('src/components/SiteHeader.tsx', root), 'utf8');
+const indexHtml = await readFile(new URL('index.html', root), 'utf8');
+if (!servicePage.includes("noIndex={slug === 'ai-workshops'}")) {
+  throw new Error('Workshops page must be noIndex.');
+}
+if (!contentPages.includes('ogType="article" noIndex')) {
+  throw new Error('SMB guide page must be noIndex.');
+}
+
+const hebrewFacing = [homepage, servicePage, contentPages, header, indexHtml].join('\n');
+const banned = ['לחיות', 'קביעת ייעוץ ראשוני', 'ייעוץ ואז בניה', 'מוצאים את המנוף', 'יכולת שנשארת', 'יכולת פנימית', 'שכבת באזז', 'עסק קטן'];
+for (const phrase of banned) {
+  if (hebrewFacing.includes(phrase)) {
+    throw new Error(`Banned translated Hebrew still present: ${phrase}`);
+  }
 }
 
 console.log(`SEO verification passed for ${requiredRoutes.length} language routes.`);
